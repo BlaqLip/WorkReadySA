@@ -152,6 +152,23 @@ body {
   background: none; border: none;
   color: var(--white); font-size: 1.5rem;
   cursor: pointer;
+  z-index: 1001;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* HERO */
@@ -519,6 +536,24 @@ body {
   display: flex; justify-content: space-between; align-items: center;
   padding: 24px 24px;
   font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--gold);
 }
 
 /* MOBILE */
@@ -535,8 +570,22 @@ body {
   .stat { padding: 0; }
 }
 @media (max-width: 600px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--green-deep); padding: 24px; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
-  .nav-links.open { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background: var(--green-deep);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 40px;
+    gap: 32px;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+  }
+  .nav-links.open { right: 0; }
   .nav-toggle { display: block; }
   .blog-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
@@ -544,5 +593,10 @@ body {
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .hero-cta { flex-direction: column; }
+  .hero-headline { font-size: 2.6rem; }
+  .hero { padding: 120px 0 60px; }
+  .footer-inner { text-align: center; }
+  .footer-links ul { align-items: center; }
+  .footer-brand p { margin: 0 auto; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

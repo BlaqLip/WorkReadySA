@@ -1,12 +1,27 @@
 // Mobile nav toggle
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.getElementById('navLinks');
-toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+const navOverlay = document.getElementById('navOverlay');
 
-// Close nav on outside click
+function toggleMenu() {
+  navLinks.classList.toggle('open');
+  navOverlay.classList.toggle('active');
+}
+
+function closeMenu() {
+  navLinks.classList.remove('open');
+  navOverlay.classList.remove('active');
+}
+
+toggle.addEventListener('click', toggleMenu);
+navOverlay.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+// Close nav on outside click (if it missed the overlay)
 document.addEventListener('click', e => {
-  if (!e.target.closest('.nav')) navLinks.classList.remove('open');
+  if (!e.target.closest('.nav') && !e.target.closest('.nav-toggle')) {
+    closeMenu();
+  }
 });
 
 // Blog category filter (UI only)
@@ -21,7 +36,7 @@ document.querySelectorAll('.cat-btn').forEach(btn => {
 function handleForm(e) {
   e.preventDefault();
   const msg = document.getElementById('formMsg');
-  msg.textContent = 'Thank you! We'll be in touch shortly.';
+  msg.textContent = "Thank you! We'll be in touch shortly.";
   e.target.reset();
   setTimeout(() => msg.textContent = '', 5000);
 }
