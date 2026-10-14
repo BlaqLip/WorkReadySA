@@ -1,44 +1,10 @@
-// Mobile nav toggle
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.getElementById('navLinks');
-toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-// Close nav on outside click
-document.addEventListener('click', e => {
-  if (!e.target.closest('.nav')) navLinks.classList.remove('open');
-});
-
-// Blog category filter (UI only)
-document.querySelectorAll('.cat-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  });
-});
-
-// Contact form
-function handleForm(e) {
-  e.preventDefault();
-  const msg = document.getElementById('formMsg');
-  msg.textContent = 'Thank you! We'll be in touch shortly.';
-  e.target.reset();
-  setTimeout(() => msg.textContent = '', 5000);
-}
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.service-card, .blog-card, .mv-card, .contact-item').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
-});
+const toggle=document.querySelector('.nav-toggle'),navLinks=document.getElementById('navLinks');
+function closeMenu(){navLinks?.classList.remove('open');toggle?.setAttribute('aria-expanded','false');toggle?.setAttribute('aria-label','Open navigation');}
+toggle?.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation');});
+navLinks?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('click',e=>{if(!e.target.closest('.nav'))closeMenu();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const open=navLinks?.classList.contains('open');closeMenu();if(open)toggle?.focus();}});
+window.addEventListener('resize',()=>{if(innerWidth>760)closeMenu();});
+function filterResources(category){let visible=0;document.querySelectorAll('.blog-card').forEach(card=>{const match=category==='All'||card.dataset.category===category||(category==='Career Advice'&&['CV Tips','Interview Tips'].includes(card.dataset.category));card.hidden=!match;if(match)visible++;});document.querySelectorAll('.cat-btn').forEach(btn=>{const active=btn.textContent.trim()===category;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});const empty=document.getElementById('emptyResources');if(empty)empty.hidden=visible>0;}
+document.querySelectorAll('.cat-btn').forEach(btn=>{btn.setAttribute('aria-pressed',String(btn.classList.contains('active')));btn.addEventListener('click',()=>filterResources(btn.textContent.trim()));});
+document.querySelectorAll('[data-filter]').forEach(link=>link.addEventListener('click',()=>filterResources(link.dataset.filter)));

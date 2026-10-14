@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WorkReadySA – Connecting South Africans to Opportunities</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-</head>
-<body>
+<meta name="description" content="WorkReadySA career guidance, CV resources and recruitment services for South African job seekers and employers."></head>
+<body id="top"><a class="skip-link" href="#services">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav-wrap">
     <nav class="nav container">
-      <a href="#" class="logo">Work<span>Ready</span>SA</a>
-      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <a href="#top" class="logo">Work<span>Ready</span>SA</a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
@@ -26,7 +26,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-map"></div>
+    <div class="hero-bg-map" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div class="hero-tag">South Africa's Recruitment Platform</div>
       <h1 class="hero-headline">
@@ -36,15 +36,15 @@
       </h1>
       <p class="hero-sub">Whether you're looking for your next role or the right candidate — WorkReadySA bridges the gap between talent and opportunity.</p>
       <div class="hero-cta">
-        <a href="#services" class="btn-primary">Find Jobs</a>
-        <a href="#services" class="btn-ghost">Hire Talent</a>
+        <a href="#services" class="btn-primary">Job seeker services</a>
+        <a href="#services" class="btn-ghost">Employer services</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num">9</span><span class="stat-label">Provinces Covered</span></div>
+        <div class="stat"><span class="stat-num">Careers</span><span class="stat-label">Job seeker guidance</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">1000+</span><span class="stat-label">Opportunities Listed</span></div>
+        <div class="stat"><span class="stat-num">Talent</span><span class="stat-label">Employer support</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">CV Assistance</span></div>
+        <div class="stat"><span class="stat-num">CVs</span><span class="stat-label">Application resources</span></div>
       </div>
     </div>
   </section>
@@ -111,7 +111,7 @@
               <div><strong>Workforce Solutions</strong><br/>Strategic staffing partnerships</div>
             </li>
           </ul>
-          <a href="#contact" class="btn-accent">Post a Role</a>
+          <a href="#contact" class="btn-accent">Discuss your hiring needs</a>
         </div>
       </div>
     </div>
@@ -121,17 +121,17 @@
   <section class="about section" id="about">
     <div class="container about-inner">
       <div class="about-visual">
-        <div class="about-badge">Est. 2024</div>
+        <div class="about-badge">Career support</div>
         <div class="about-pattern"></div>
         <div class="about-card-float">
-          <span class="float-icon">&#127482;&#127462;</span>
+          <span class="float-icon">&#127487;&#127462;</span>
           <span>Proudly South African</span>
         </div>
       </div>
       <div class="about-content">
         <div class="section-label">About Us</div>
         <h2 class="section-title">Bridging the Gap Between Talent &amp; Opportunity</h2>
-        <p>WorkReadySA was founded with a vision to connect talented job seekers with businesses seeking skilled employees. We believe <strong>everyone deserves access to opportunities</strong> — and every employer deserves access to quality talent.</p>
+        <p>WorkReadySA connects job seekers with career guidance and businesses with recruitment and workforce solutions. We believe <strong>everyone deserves access to opportunities</strong>, and that clear information helps people take their next step.</p>
         <div class="mv-grid">
           <div class="mv-card">
             <div class="mv-icon">&#127919;</div>
@@ -162,31 +162,31 @@
         <button class="cat-btn">Employer Resources</button>
       </div>
       <div class="blog-grid">
-        <article class="blog-card featured">
+        <article class="blog-card featured" data-category="Welcome">
           <div class="blog-tag">Welcome Post</div>
           <h3>Welcome to WorkReadySA</h3>
-          <p>Your trusted recruitment and workforce solutions partner. Our mission is to connect job seekers with opportunities and help employers find qualified, reliable talent across South Africa.</p>
-          <a href="#" class="blog-link">Read More &#8594;</a>
+          <p>Explore practical career resources and learn how WorkReadySA supports job seekers and employers in South Africa.</p>
+          <details class="article-detail"><summary>Read guide</summary><h4>About WorkReadySA</h4><p>WorkReadySA focuses on career guidance, CV assistance and recruitment services. Explore the service sections to understand the support available to job seekers and employers.</p></details>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" data-category="CV Tips">
           <div class="blog-tag">CV Tips</div>
           <h3>5 Things Every SA Job Seeker Should Include in Their CV</h3>
           <p>Stand out in a competitive market with a CV that speaks directly to South African employers.</p>
-          <a href="#" class="blog-link">Read More &#8594;</a>
+          <details class="article-detail"><summary>Read guide</summary><h4>Five essentials for your CV</h4><p>Include clear contact details, a short role-specific summary, relevant skills, education or certificates, and experience with concrete examples of your contribution. Keep formatting simple, proofread carefully and avoid unnecessary personal identifiers.</p></details>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" data-category="Interview Tips">
           <div class="blog-tag">Interview Tips</div>
           <h3>How to Prepare for a Job Interview in South Africa</h3>
           <p>From what to wear to what to say — practical tips for making a great first impression.</p>
-          <a href="#" class="blog-link">Read More &#8594;</a>
+          <details class="article-detail"><summary>Read guide</summary><h4>Prepare for your interview</h4><p>Read the job description, research the employer and prepare examples of how you solved problems. Practise explaining your skills clearly, plan your journey or test your video setup, and prepare thoughtful questions about the role.</p></details>
         </article>
-        <article class="blog-card">
+        <article class="blog-card" data-category="Employer Resources">
           <div class="blog-tag">Employer Resources</div>
           <h3>Why Staff Screening Saves Your Business Money</h3>
           <p>The true cost of a bad hire — and how proper vetting protects your team and culture.</p>
-          <a href="#" class="blog-link">Read More &#8594;</a>
+          <details class="article-detail"><summary>Read guide</summary><h4>A consistent screening process</h4><p>Define the skills and responsibilities of the role before reviewing candidates. Use consistent questions and job-relevant criteria. Verify information through an appropriate, consent-based process and document hiring decisions clearly.</p></details>
         </article>
-      </div>
+      </div><p id="emptyResources" hidden>No resources in this category yet. Choose All to view the available guides.</p>
     </div>
   </section>
 
@@ -197,46 +197,9 @@
         <div class="section-label">Contact Us</div>
         <h2 class="section-title">Let's Get to Work</h2>
         <p>Reach out whether you're a job seeker looking for guidance or an employer ready to build your team.</p>
-        <div class="contact-methods">
-          <div class="contact-item">
-            <span class="c-icon">&#9993;</span>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:your@email.com">your@email.com</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">&#128242;</span>
-            <div>
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/27000000000">+27 000 000 0000</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="c-icon">&#127758;</span>
-            <div>
-              <strong>Website</strong>
-              <a href="#">workreadysa.blogspot.com</a>
-            </div>
-          </div>
-        </div>
+        <div class="contact-pending"><h3>Enquiries opening soon</h3><p>Business email and WhatsApp details are being confirmed. Online enquiries are not yet available.</p><p>Please check back for verified contact information.</p></div>
       </div>
-      <form class="contact-form" onsubmit="handleForm(event)">
-        <h3>Send a Message</h3>
-        <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Email Address" required />
-        </div>
-        <select>
-          <option value="" disabled selected>I am a…</option>
-          <option>Job Seeker</option>
-          <option>Employer</option>
-          <option>Other</option>
-        </select>
-        <textarea placeholder="Tell us how we can help you…" rows="4" required></textarea>
-        <button type="submit" class="btn-primary full-width">Send Message &#8594;</button>
-        <p id="formMsg" class="form-msg"></p>
-      </form>
+      <div class="contact-form"><h3>Explore our services</h3><p>Learn about career support and recruitment services while our enquiry channels are being prepared.</p><a class="btn-primary" href="#services">View services</a></div>
     </div>
   </section>
 
@@ -244,7 +207,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="#" class="logo">Work<span>Ready</span>SA</a>
+        <a href="#top" class="logo">Work<span>Ready</span>SA</a>
         <p>Connecting South Africans to opportunities, one placement at a time.</p>
       </div>
       <div class="footer-links">
@@ -260,20 +223,21 @@
       <div class="footer-links">
         <h4>Blog Categories</h4>
         <ul>
-          <li><a href="#">Latest Jobs</a></li>
-          <li><a href="#">Career Advice</a></li>
-          <li><a href="#">CV Tips</a></li>
-          <li><a href="#">Interview Tips</a></li>
-          <li><a href="#">Recruitment News</a></li>
+          <li><a href="#blog" data-filter="Latest Jobs">Latest Jobs</a></li>
+          <li><a href="#blog" data-filter="Career Advice">Career Advice</a></li>
+          <li><a href="#blog" data-filter="CV Tips">CV Tips</a></li>
+          <li><a href="#blog" data-filter="Interview Tips">Interview Tips</a></li>
+          <li><a href="#blog" data-filter="Recruitment News">Recruitment News</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>&copy; 2024 WorkReadySA. All rights reserved.</p>
-      <p>Proudly South African &#127482;&#127462;</p>
+      <p>&copy; 2026 WorkReadySA. All rights reserved.</p>
+      <p>Proudly South African &#127487;&#127462;</p>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
+
