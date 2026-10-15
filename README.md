@@ -51,3 +51,7 @@ Tests exercise registration, login, job submission/publication, filtered search,
 - Privacy notice and explicit application consent are included. The business owner must supply verified operator contact details and retention procedures before collecting real applicants at scale.
 - Rate-limit reservation records are bucketed every 15 minutes; periodically remove old `limits/` records through the private storage dashboard. Sessions expire after seven days; expired rows may also be removed there.
 - Build/deployment and a live storage check are required before describing the hosted app as operational.
+
+## Project Wiki
+
+[Project overview, setup, architecture and current status](wiki/Home.md).
