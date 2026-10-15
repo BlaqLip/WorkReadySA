@@ -16,7 +16,7 @@
       <a href="#top" class="logo">Work<span>Ready</span>SA</a>
       <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
+        <li><a href="app.html#jobs">Find jobs</a></li><li><a href="app.html#dashboard">My workspace</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contact" class="btn-nav">Contact Us</a></li>
@@ -24,6 +24,7 @@
     </nav>
   </header>
 
+  <main>
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg-map" aria-hidden="true"></div>
@@ -36,8 +37,8 @@
       </h1>
       <p class="hero-sub">Whether you're looking for your next role or the right candidate — WorkReadySA bridges the gap between talent and opportunity.</p>
       <div class="hero-cta">
-        <a href="#services" class="btn-primary">Job seeker services</a>
-        <a href="#services" class="btn-ghost">Employer services</a>
+        <a href="app.html#jobs" class="btn-primary">Find a job</a>
+        <a href="app.html#employer" class="btn-ghost">Post a vacancy</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">Careers</span><span class="stat-label">Job seeker guidance</span></div>
@@ -63,7 +64,7 @@
           <ul class="service-list">
             <li>
               <span class="icon">&#128188;</span>
-              <div><strong>Job Opportunities</strong><br/>Curated listings across all sectors in SA</div>
+              <div><strong>Job Opportunities</strong><br/>Browse vacancies published after administrator review</div>
             </li>
             <li>
               <span class="icon">&#128203;</span>
@@ -79,16 +80,16 @@
             </li>
             <li>
               <span class="icon">&#128276;</span>
-              <div><strong>Employment Alerts</strong><br/>Get notified when the right job posts</div>
+              <div><strong>Application Tracking</strong><br/>Track submitted applications in your workspace</div>
             </li>
           </ul>
-          <a href="#contact" class="btn-primary">Get Started</a>
+          <a href="app.html#jobs" class="btn-primary">Explore opportunities</a>
         </div>
 
         <div class="service-card employers">
           <div class="card-eyebrow">Employers</div>
           <h3>Find Work-Ready Talent</h3>
-          <p>We source, screen, and deliver candidates so you can focus on your business.</p>
+          <p>Post vacancies, receive candidate applications and manage progress in your employer workspace.</p>
           <ul class="service-list">
             <li>
               <span class="icon">&#128269;</span>
@@ -100,7 +101,7 @@
             </li>
             <li>
               <span class="icon">&#9989;</span>
-              <div><strong>Staff Screening</strong><br/>Background checks and vetting</div>
+              <div><strong>Application Review</strong><br/>Review submitted CVs and application notes</div>
             </li>
             <li>
               <span class="icon">&#128198;</span>
@@ -108,10 +109,10 @@
             </li>
             <li>
               <span class="icon">&#128200;</span>
-              <div><strong>Workforce Solutions</strong><br/>Strategic staffing partnerships</div>
+              <div><strong>Workforce Solutions</strong><br/>Keep vacancies and application statuses organised</div>
             </li>
           </ul>
-          <a href="#contact" class="btn-accent">Discuss your hiring needs</a>
+          <a href="app.html#employer" class="btn-accent">Create an employer account</a>
         </div>
       </div>
     </div>
@@ -196,13 +197,14 @@
       <div class="contact-info">
         <div class="section-label">Contact Us</div>
         <h2 class="section-title">Let's Get to Work</h2>
-        <p>Reach out whether you're a job seeker looking for guidance or an employer ready to build your team.</p>
-        <div class="contact-pending"><h3>Enquiries opening soon</h3><p>Business email and WhatsApp details are being confirmed. Online enquiries are not yet available.</p><p>Please check back for verified contact information.</p></div>
+        <p>Send a message to the WorkReadySA team. Your enquiry is saved in the administrator inbox.</p>
+        <p>Have an account? <a href="app.html#dashboard">Open your workspace</a> to manage vacancies or track applications.</p>
       </div>
-      <div class="contact-form"><h3>Explore our services</h3><p>Learn about career support and recruitment services while our enquiry channels are being prepared.</p><a class="btn-primary" href="#services">View services</a></div>
+      <form class="contact-form" id="enquiryForm"><h3>How can we help?</h3><label>Your name<input name="name" minlength="2" maxlength="100" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" maxlength="254" required></label><label>Message<textarea name="message" minlength="20" maxlength="4000" rows="5" required></textarea></label><label class="honeypot" hidden>Website<input name="website" tabindex="-1" autocomplete="off"></label><label class="consent-line"><input name="consent" type="checkbox" required>I agree to the <a href="privacy.html">privacy notice</a> and processing of my enquiry.</label><button class="btn-primary" type="submit">Send enquiry</button><p id="enquiryStatus" role="status" aria-live="polite"></p></form>
     </div>
   </section>
 
+  </main>
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -233,11 +235,12 @@
     </div>
     <div class="footer-bottom container">
       <p>&copy; 2026 WorkReadySA. All rights reserved.</p>
-      <p>Proudly South African &#127487;&#127462;</p>
+      <p><a href="privacy.html">Privacy & data</a></p><p>Proudly South African &#127487;&#127462;</p>
     </div>
   </footer>
 
   <script src="main.js"></script>
 </body>
 </html>
+
 
